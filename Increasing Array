@@ -1,0 +1,24 @@
+// Tamjid is learning .
+
+Problem Link :- https://cses.fi/problemset/task/1094 .
+
+#include<bits/stdc++.h> 
+using namespace std ;
+
+/*
+    Intuition :- Ei problem ta just ekta implementation er problem .
+    Ekhane array er element gula ke chuto kora jay na . Jehetu kebol boro
+    kora jay , amra greedily shobcheye kom koto boro kore kaaj chalanu
+    jay thik toto boro korbo . Tahole amader answer hobe sorbonimno .
+*/
+
+int main(){
+    int n ; cin >> n ; long long curMax = 0 , ans = 0 ;
+    for(int i = 0 ; i < n ; i++){
+        long long x ; cin >> x ; 
+        if(x>=curMax) curMax = x ;
+        else ans += (curMax-x) ;
+    }
+    cout << ans << '\n' ;
+}
+
