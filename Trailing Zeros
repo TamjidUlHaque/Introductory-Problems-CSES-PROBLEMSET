@@ -23,6 +23,8 @@ using namespace std ;
 
     Tarmane ei question er answer holo 1 theke n porjonto joto gula songkhar 
     divisor 5 + 5 koto bar kore ache eita o count korte hobe .
+
+    // You have to find the number of 5's in prime factorization of n !.
 */
 
 int main(){
