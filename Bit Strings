@@ -17,11 +17,32 @@ using namespace std ;
 
 long long MOD = 1e9 + 7 ;
 
-int main(){
-    long long n ; cin >> n ; long long bitStringCount = 1 ;
-    for(int i = 1 ; i <= n ; i++){
-        bitStringCount *= 2 ; bitStringCount %= MOD ;
+long long binaryExponentiation(long long a , long long b){
+    long long result = 1LL ;
+    while(b){
+        if(b&1) result = ((result % MOD) * (a % MOD)) % MOD ;
+        a *= a ; a %= MOD ;
+        b >>= 1 ;
     }
-    cout << bitStringCount << '\n' ;
+    return result ;
+}
+
+int main(){
+    long long n ; cin >> n ;
+    cout << binaryExponentiation(2,n) << '\n' ;
+}
+
+Ei code ta loop chaliye o kora jeto , tokhon er complexity hoto O(n) . 
+Ekhane jei code ta lekha hoise ekhane code er complexity holo O(log2(n)) . 
+Arekta system e binary ba Modular Exponentiation kora jay . Ta holo recursive approach e.
+
+long long power(long long a, long long b) {
+    if (b == 0) return 1;              // base case
+    if (b % 2 == 0) {
+        long long half = power(a, b / 2);
+        return half * half;            // return the squared result
+    } else {
+        return a * power(a, b - 1);    // return the recursive product
+    }
 }
 
