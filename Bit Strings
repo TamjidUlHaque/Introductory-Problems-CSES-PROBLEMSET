@@ -1,0 +1,27 @@
+// Tamjid is learning .
+
+Problem Link :- https://cses.fi/problemset/task/1617/
+
+#include<bits/stdc++.h> 
+using namespace std ;
+
+/*
+    Intuition :- Ekhane bola ache je n size er koto gula unique
+    bitstring possible . Bitstring er kuno ekta index er value
+    hoy 0 ba 1 hote pare . Tahole n size er bitstring e n ta position
+    thakte pare . Proti position er value hoy 0 ba 1 hote pare . 
+    Tahole amra bolte pari je , total number of bitstring hobe 
+    2 * 2 * 2 * 2......................upto n number of 2 
+    = pow(2,len of bitstring) ;
+*/
+
+long long MOD = 1e9 + 7 ;
+
+int main(){
+    long long n ; cin >> n ; long long bitStringCount = 1 ;
+    for(int i = 1 ; i <= n ; i++){
+        bitStringCount *= 2 ; bitStringCount %= MOD ;
+    }
+    cout << bitStringCount << '\n' ;
+}
+
