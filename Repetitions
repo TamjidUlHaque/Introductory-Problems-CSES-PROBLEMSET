@@ -1,0 +1,32 @@
+// Tamjid is learning .
+
+Problem Link :- https://cses.fi/problemset/task/1069/
+
+#include<bits/stdc++.h> 
+using namespace std ;
+
+/*
+    Intuition :- Eita just implementation er problem . Ekhane
+    kun element koyta kore ache just oigula ke alada kora 
+    hoise . Erpore loop use kore kun char ta shobcheye beshi
+    bar adjacent vabe ache oita check kora hoise .
+*/
+
+int main(){
+    string s ; cin >> s ; vector<pair<char,int>> vec ;
+    int cnt = 0 ; char curr = s.front() ;
+    for(int i = 0 ; i < s.size() ; i++){
+        if(curr == s[i]){
+            cnt++ ;
+        }else{
+            vec.push_back({curr,cnt}) ; 
+            curr = s[i] ; cnt = 1 ;
+        }
+    }
+    vec.push_back({curr,cnt}) ; int ans = 1 ;
+    for(auto val:vec){
+        ans = max(ans,val.second) ;
+    }
+    cout << ans << '\n' ;
+}
+
