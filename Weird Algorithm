@@ -1,0 +1,27 @@
+// Tamjid is learning .
+
+#include<bits/stdc++.h> 
+using namespace std ;
+
+/*
+    Intuition :- Ei problem tar idea math er ekta bikkhato
+    problem theke newa hoise . Er naam holo collatz conjecture.
+    Ei problem ta easy to understand but so much difficult to
+    prove . Er mul kotha holo jekuno ekta number er upore jodi
+    duita operation kora hoy --> i) if even then divide it by 2,
+    ii) if odd then multiply it by 3 and then add 1 .
+    Tahole ei number ta 4 2 1 er loop er moddhe porbe and kichu
+    songkhok move er pore er value obossoi 1 hoye jabe .
+    It is a legendary unsolvable puzzle .
+*/
+
+int main(){
+    long long n ; cin >> n ; 
+    while(n>1){
+        cout << n << " " ;
+        if(n&1) n = 3*n+1 ;
+        else n = n/2 ;
+    }
+    cout << 1 << '\n' ;
+}
+
