@@ -1,0 +1,36 @@
+// Tamjid is learning .
+
+Problem Link :- https://cses.fi/problemset/task/1618/
+
+#include<bits/stdc++.h> 
+using namespace std ;
+
+/*
+    Intuition :- Ekhane bola ache je amader ke bolte hobe n factorial
+    er moddhe koto gula trailing zero ache . Mane thik koto gula 0 er 
+    pore ekta non zero digit pawa jabe . 
+
+    Multiplication er seshe kuno ekta songkha er seshe zero orthat trailing
+    zero ashe duita karone . 
+
+    1) Hoyto songkha tar sathe emon kuno songkha gun dewa hoyeche jei songkhar
+    seshe zero chilo . Ei ghotona ta ke o amra 5 ar 2 er multiplication er fol
+    hishabe declare korte pari . Ekhane 5 & 2 duita e shora shori multiple 
+    theke ashtese . 
+
+    2) Nahole hoyto sonkha ta ekta 5 er multiple chilo ar number er moddhe ekta
+    2 er multiple chilo or vice versa . Ei 5 ar 2 gun hoye 0 create korche .
+
+    Tarmane ei question er answer holo 1 theke n porjonto joto gula songkhar 
+    divisor 5 + 5 koto bar kore ache eita o count korte hobe .
+*/
+
+int main(){
+    long long n ; cin >> n ; long long cnt = 0 ;
+    long long value = 5 ;
+    while(value<=n){
+        cnt += (n/value) ; value *= 5 ;
+    }
+    cout << cnt << '\n' ;
+}
+
