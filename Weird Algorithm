@@ -15,6 +15,17 @@ using namespace std ;
     Tahole ei number ta 4 2 1 er loop er moddhe porbe and kichu
     songkhok move er pore er value obossoi 1 hoye jabe .
     It is a legendary unsolvable puzzle .
+
+    Ei question er theke sikhar arekta jinish holo complexity .
+    2 diye kuno number ke vaag korte thakle oi number ta 1 porjonoto
+    pouchate operation lagbe O(log2(n)) songkhok .
+    2 raised to 68 porjonto ei conjecture ta kaaj kore eita proman 
+    kora hoise . Ekhane n er constraints hocche 1e6 . Tai ei conjecture
+    ta kaaj korbe .
+
+    2 er power ke 10 er power e convert korte gele duita jinish mone 
+    rakhte hobe .
+    1) 2^10 == 10^3 [Almost Equal]      , 2) ((Power of 2)/10)*3 == power of 10 . [Almost equal] 
 */
 
 int main(){
