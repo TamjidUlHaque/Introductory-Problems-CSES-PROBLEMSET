@@ -1,0 +1,35 @@
+// Tamjid is learning .
+
+Problem Link :- https://cses.fi/problemset/task/1071/
+
+#include<bits/stdc++.h> 
+using namespace std ;
+
+/*
+    Intuition :- This is the first problem of pattern finding.
+    Ekhane ekta grid dewa ache jei grid er value calculation kora
+    shomvob na . Ei rokom problem future e o face korte hobe jekhane
+    actual grid ta bananu shomvob na . Tokhon ekta pattern khuje 
+    ber kore oi pattern er upore answer korte hobe .
+*/
+
+int main(){
+    int testcase ; cin >> testcase ;
+    while(testcase-->0){
+        long long x , y ; cin >> x >> y ;
+        if(x&1){
+            if(x>=y) cout << (x-1)*(x-1) + y << '\n' ;
+            else{
+                if(y&1) cout << y*y - x + 1 << '\n' ;
+                else cout << (y-1)*(y-1) + x << '\n' ;
+            }
+        }else{
+            if(x>=y) cout << x * x - y + 1 << '\n' ;
+            else{
+                if(y&1) cout << y*y - x + 1 << '\n' ;
+                else cout << (y-1)*(y-1) + x << '\n' ;
+            }
+        }
+    }
+}
+
